@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ t('title.h1.home') }}</h1>
+    <p>test</p>
   </div>
 </template>
 

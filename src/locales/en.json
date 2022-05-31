@@ -1,0 +1,25 @@
+{
+  "state": {
+    "404": "File not found"
+  },
+  "gnb": {
+    "home": {
+      "name": "Home"
+    },
+    "about": {
+      "name": "About"
+    },
+    "menu3": {
+      "name": "Menu3"
+    },
+    "menu4": {
+      "name":"Menu4"
+    }
+  },
+  "title": {
+    "h1": {
+      "home": "This is Main page.",
+      "about": "This is About page."
+    }
+  }
+}

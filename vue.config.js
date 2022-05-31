@@ -14,7 +14,7 @@ module.exports = defineConfig({
       fullInstall: true,
     },
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/vue3-setting/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-setting-/' : '/',
   lintOnSave: process.env.NODE_ENV !== 'production',
   outputDir: './docs/',
   assetsDir: './assets',

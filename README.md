@@ -1,10 +1,12 @@
 # vue-setting
 
+# Deploy page url
+https://cnx-pub-unit.github.io/vue-setting-/#/
+
 ## Project setup
 ```
 npm install
 ```
-
 ### Compiles for development ( web-server )
 ```
 npm run dev

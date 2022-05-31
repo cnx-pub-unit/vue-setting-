@@ -23,8 +23,8 @@ export default {
       gnbList: [
         { src: '/', name: 'gnb.home.name' },
         { src: '/about', name: 'gnb.about.name' },
-        { src: '/test1', name: 'gnb.menu3.name' },
-        { src: '/test2', name: 'gnb.menu4.name' },
+        { src: '/about/test1', name: 'gnb.menu3.name' },
+        { src: '/about/test2', name: 'gnb.menu4.name' },
       ],
     };
   },

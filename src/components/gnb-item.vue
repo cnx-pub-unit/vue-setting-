@@ -1,7 +1,8 @@
 <template>
   <li v-for="(item, i) in lists" :key="i">
     <router-link
-      :to="item.src">
+      :to="item.src"
+      @click="scrollTopHandle">
       {{ t(item.name) }}
     </router-link>
   </li>
@@ -17,7 +18,11 @@ export default {
   },
   setup() {
     const { t } = useI18n({ useScope: 'global' });
-    return { t };
+
+    const scrollTopHandle = () => {
+      window.scrollTo(0, 0);
+    };
+    return { t, scrollTopHandle };
   },
 };
 </script>
@@ -30,18 +35,29 @@ export default {
       &::before {
         content:"";
         position:absolute;
-        top:0;
+        top:50%;
         left:0;
         width:1px;
-        height:100%;
+        height:50%;
         background: #d5d5d5;
+        transform: translateY(-50%);
       }
-      padding-left:11px;
-      margin-left:10px;
+      padding-left:1px;
     }
 
     > a {
+      display:flex;
+      align-items: center;
+      padding:0 1rem;
+      height:4rem;
+      line-height:1;
+      color:#fff;
       text-decoration: none;
+      &.router-link-exact-active,
+      &:hover {
+        background:#ff6633;
+        color:#fff;
+      }
     }
   }
 }

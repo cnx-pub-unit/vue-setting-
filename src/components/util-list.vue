@@ -7,7 +7,7 @@
 
 <script>
 import { useI18n } from 'vue-i18n';
-import langChange from '@/components/langChange.vue';
+import langChange from '@/components/lang-change.vue';
 
 export default {
   name: 'util-list',
@@ -23,9 +23,9 @@ export default {
 
 <style scoped lang="scss">
 .util-list {
-  position:absolute;
-  top:50%;
-  right:10px;
-  transform: translateY(-50%);
+  min-width:168px;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 </style>

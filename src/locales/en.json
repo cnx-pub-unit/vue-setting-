@@ -21,5 +21,19 @@
       "home": "This is Main page.",
       "about": "This is About page."
     }
+  },
+  "carousel": {
+    "mainKeyVisual": {
+      "name": [
+        "slide 1",
+        "slide 2",
+        "slide 3"
+      ],
+      "text": [
+        "first content text",
+        "second content text",
+        "third content text"
+      ]
+    }
   }
 }

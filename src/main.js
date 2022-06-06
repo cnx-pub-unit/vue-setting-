@@ -1,11 +1,11 @@
 import { createApp } from 'vue';
-import App from './App.vue';
+import axios from 'axios';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import gsap from 'gsap';
+import i18n from './i18n';
 import router from './router';
 import store from './store';
-import i18n from './i18n';
-import axios from 'axios';
-import gsap from 'gsap';
-import ScrollTrigger from "gsap/ScrollTrigger";
+import App from './App.vue';
 
 import '@/assets/scss/reset.scss';
 import '@/assets/scss/layout.scss';
@@ -17,8 +17,8 @@ const app = createApp(App);
 console.log(app);
 app.config.globalProperties.$axios = axios;
 app
-.use(i18n)
-.use(store)
-.use(router)
-.mount('#app');
+  .use(i18n)
+  .use(store)
+  .use(router)
+  .mount('#app');
 

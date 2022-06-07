@@ -5,19 +5,28 @@
     :space-between="swiperOptions.spaceBetween"
     :loop="swiperOptions.loop"
     :centeredSlides="swiperOptions.centeredSlides"
-    navigation
+    :direction="swiperOptions.direction"
+    :scrollbar="swiperOptions.scrollbar"
+    :mousewheeel="swiperOptions.mousewheel"
     :pagination="{ clickable: true }"
+    :freeMode="swiperOptions.freeMode"
+    navigation
     @swiper="onSwiper"
     @slideChange="onSlideChange">
 
     <swiper-slide
+      class="ani"
       v-for="(item, i) in swiperLists"
       :key="i"
-      :style="{'background-image':'url(' + item.src + ')'}">
-      <div class="content-box">
-        <strong class="title" v-show="item.name !== ''">{{ t(item.name) }}</strong>
+      :style="{'background-image':'url(' + item.backgroundSrc + ')'}">
+      <div class="slide-inner">
+        <div class="content-box">
+          <strong class="title" v-show="item.name !== ''">{{ t(item.name) }}</strong>
 
-        <p class="desc" v-show="item.text !== ''">{{ t(item.text) }}</p>
+          <p class="desc" v-show="item.text !== ''">{{ t(item.text) }}</p>
+
+          <p class="desc" v-show="item.router !== ''"><router-link class="more-btn btn round" :to="item.router">{{ t(item.routeName) }}</router-link></p>
+        </div>
       </div>
     </swiper-slide>
   </swiper>
@@ -42,60 +51,73 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  data() {
+    return {
+      isActive: false,
+    };
+  },
   setup() {
     const { t } = useI18n();
-    const findActiveSlide = (slide) => {
-      if(slide.classList.contains('swiper-slide-active') ){
-        slide.classList.add('ani');
-      } else {
-        slide.classList.remove('ani');
-      }
-    };
     const onSwiper = (swiper) => {
-      swiper.slides.forEach((value) => {
-        findActiveSlide(value);
-      });
+      console.log(swiper);
     };
     const onSlideChange = (swiper) => {
-      swiper.slides.forEach((value) => {
-        findActiveSlide(value);
-      });
+      console.log(swiper);
     };
 
     return {
-      t, onSwiper, onSlideChange, findActiveSlide,
+      t, onSwiper, onSlideChange,
     };
   },
 };
 </script>
 
 <style scoped lang="scss">
+.swiper-container {
   .swiper-slide {
     position:relative;
-    &.ani {
-      .title {
-        animation: text-down .7s forwards;
-      }
-      .desc {
-        animation: text-move-right .7s forwards;
-      }
-    }
-    .content-box {
-      padding-top:200px;
-      text-align:left;
-      text-indent:100px;
-      .title {
-        display:block;
-        font-size: 5rem;
-        color:#fff;
-        & + .desc {
-          margin-top:10px;
+    &.swiper-slide-active {
+      &.ani {
+        .slide-inner {
+          animation: fade-in .6s ease forwards;
+        }
+        .title {
+          animation: text-move-down .4s linear forwards;
+        }
+        .desc {
+          animation: text-move-right .5s linear forwards;
+          & + .desc {
+            animation: fade-in .6s linear forwards;
+          }
         }
       }
-      .desc {
-        font-size: 1rem;
-        color: #fff;
+    }
+
+    .slide-inner {
+      position:relative;
+      width:100%;
+      height:100%;
+      .content-box {
+        .title {
+          display:block;
+          font-weight:800;
+          color: inherit;
+          & + .desc {
+            margin-top:20px;
+          }
+        }
+        .desc {
+          letter-spacing: -.025em;
+          color: inherit;
+          & + .desc {
+            margin-top:40px;
+          }
+        }
+        .more-btn {
+          color: inherit;
+        }
       }
     }
   }
+}
 </style>

@@ -1,6 +1,6 @@
 <template >
     <header-wrap />
-    <main id="main" class="main" style="height:1000px">
+    <main id="main" class="main">
         <router-view />
     </main>
 
@@ -74,14 +74,19 @@ nav {
         }
     }
 }
-
-.test-slide {
-    .swiper-slide{
-        height: 300px;
-        line-height: 300px;
-        font-size: 30px;
-        text-align: center;
-        background-color: pink;
+.main {
+  margin-bottom:50px;
+  .section {
+    & + .section {
+      margin-top:5rem;
     }
+    .section-title {
+      font-size:3rem;
+    }
+  }
+}
+
+.footer {
+  height:300px;
 }
 </style>

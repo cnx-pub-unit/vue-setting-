@@ -1,9 +1,26 @@
 
-@keyframes text-down {
-  0% {transform:translateY(-150px);opacity:0;}
+@keyframes text-move-top {
+  0% {transform:translateY(300px);opacity:0;}
   100% {transform:translateY(0);opacity:1;}
 }
 @keyframes text-move-right {
   0% {transform:translateX(-300px);opacity:0;}
   100% {transform:translateX(0);opacity:1;}
 }
+@keyframes text-move-down {
+  0% {transform:translateY(-150px);opacity:0;}
+  100% {transform:translateY(0);opacity:1;}
+}
+@keyframes text-move-left {
+  0% {transform:translateX(300px);opacity:0;}
+  100% {transform:translateX(0);opacity:1;}
+}
+@keyframes fade-in {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes fade-out {
+  0% {opacity:1;}
+  100% {opacity:0;}
+}
+

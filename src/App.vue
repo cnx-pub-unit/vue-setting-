@@ -82,6 +82,7 @@ nav {
     }
     .section-title {
       font-size:3rem;
+      margin-bottom:30px;
     }
   }
 }

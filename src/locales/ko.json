@@ -6,17 +6,28 @@
     "404": "파일이 없습니다."
   },
   "gnb": {
-    "home": {
-      "name": "홈"
+    "menu1": {
+      "name": "업무소개",
+      "submenu": {
+        "menu1": "dd",
+        "menu2": "dd",
+        "menu3": "dd",
+        "menu4": "dd",
+        "menu5": "dd"
+      }
     },
-    "about": {
-      "name": "어바웃"
+    "menu2": {
+      "name": "회사소개",
+      "submenu": {
+        "menu1": "dd",
+        "menu2": "dd"
+      }
     },
     "menu3": {
-      "name": "메뉴3"
+      "name": "작업물"
     },
     "menu4": {
-      "name":"메뉴4"
+      "name":"문의하기"
     }
   },
   "title": {

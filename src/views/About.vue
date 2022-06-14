@@ -1,9 +1,5 @@
 <template>
-  <div class="about">
-    <h1>{{ t('title.h1.about') }}</h1>
-
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>

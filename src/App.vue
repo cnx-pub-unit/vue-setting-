@@ -1,6 +1,7 @@
 <template >
     <header-wrap />
-    <main id="main" class="main">
+
+    <main id="main" class="main" data-scroll-container>
         <router-view />
     </main>
 
@@ -59,7 +60,21 @@ html {
     text-align: center;
     color: #2c3e50;
   .main {
-    padding-top:64px;
+    &::-webkit-scrollbar {
+      display:none;
+    }
+    .section {
+      & + .section {
+        margin-top:5rem;
+      }
+      &.mt0 {
+        margin-top:0;
+      }
+      .section-title {
+        font-size:3rem;
+        margin-bottom:30px;
+      }
+    }
   }
 }
 nav {
@@ -73,18 +88,6 @@ nav {
             color: #42b983;
         }
     }
-}
-.main {
-  margin-bottom:50px;
-  .section {
-    & + .section {
-      margin-top:5rem;
-    }
-    .section-title {
-      font-size:3rem;
-      margin-bottom:30px;
-    }
-  }
 }
 
 .footer {

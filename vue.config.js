@@ -14,6 +14,7 @@ module.exports = defineConfig({
       fullInstall: true,
     },
   },
+
   publicPath: process.env.NODE_ENV === 'production' ? '/vue-setting-/' : '/',
   lintOnSave: process.env.NODE_ENV !== 'production',
   outputDir: './docs/',
@@ -30,4 +31,12 @@ module.exports = defineConfig({
       chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
   },
+  chainWebpack: config => {
+    config
+      .plugin('eslint')
+      .tap(args => {
+         args[0].fix = true
+         return args
+      })
+    }
 });

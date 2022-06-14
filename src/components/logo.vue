@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <router-link to="/">
-      <img src="https://southkorea.concentrix.com/wp-content/uploads/2018/02/logo.svg" alt=""/>
+      <img src="../assets/images/logo-cnx-catalyst-navy.png" alt=""/>
     </router-link>
   </div>
 </template>

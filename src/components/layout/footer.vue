@@ -1,6 +1,6 @@
 <template>
   <footer id="footer" class="footer">
-    <p>{{ t('') }}</p>
+    <p>{{ footer }}</p>
   </footer>
 </template>
 
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.footer {
-  background: rgb(255, 86, 77);
-}
+  .footer {
+    background: rgb(255, 86, 77);
+  }
 </style>

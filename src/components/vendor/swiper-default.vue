@@ -18,14 +18,24 @@
       class="ani"
       v-for="(item, i) in swiperLists"
       :key="i"
-      :style="{'background-image':'url(' + item.backgroundSrc + ')'}">
+      :style="{'background-image':`url( ${item.backgroundSrc})`}">
       <div class="slide-inner">
-        <div class="content-box">
+
+        <div class="content-box" v-if="item.backgroundSrc">
           <strong class="title" v-show="item.name !== ''">{{ t(item.name) }}</strong>
 
           <p class="desc" v-show="item.text !== ''">{{ t(item.text) }}</p>
 
-          <p class="desc" v-show="item.router !== ''"><router-link class="more-btn btn round" :to="item.router">{{ t(item.routeName) }}</router-link></p>
+          <p class="desc" v-show="item.router !== ''">
+            <router-link class="more-btn btn round"
+                         :to="item.router">
+              {{ t(item.routeName) }}
+            </router-link>
+          </p>
+        </div>
+
+        <div class="video-box" v-if="item.videoSrc">
+
         </div>
       </div>
     </swiper-slide>

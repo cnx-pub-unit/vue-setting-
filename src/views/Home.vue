@@ -1,54 +1,18 @@
 <template>
   <div class="home">
 
-    <section class="section" id="section1">
+    <section class="section">
       <swiper-default
           :swiperLists="keyVisualLists"
           :swiperOptions="keyVisualSwiperOptions" />
     </section>
 
-    <section class="section" id="section2">
+<!--    <section class="section">
       <h3 class="section-title">제목</h3>
       <swiper-default
         :swiperLists="cardLists"
         :swiperOptions="cardSwiperOptions" />
-    </section>
-
-    <section class="section" id="section3">
-      <h3 class="section-title">제목</h3>
-
-      <div class="gsap-test-div" style="background:#efefef;">
-        <div class="animation-wrap" style="height:3000px;">
-          <div class="msg-panel1" style="display:table;width:100%;height:1000px;background:url(https://icepipeled.com/wp-content/uploads/2020/03/1.-ICEPIPE_2020_4_PC_bg.png) center center/cover no-repeat;;color:#000;">
-            <p style="display:table-cell;vertical-align: middle;">안녕하세요 멘트 입니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="section4" style="margin-top:0">
-      <h3 class="section-title">제목</h3>
-
-      <div class="gsap-test-div" style="background:#efefef;" >
-        <div class="animation-wrap" style="height:3000px;">
-          <div class="msg-panel2" style="display:table;width:100%;height:1000px;background:url(https://icepipeled.com/wp-content/uploads/2020/03/2.-ICEPIPE_2020_4_PC_bg_calendar-type.png) center center/cover no-repeat;;color:#fff;">
-            <p style="display:table-cell;vertical-align: middle;">안녕하세요 두번째 멘트 입니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="section5" style="margin-top:0">
-      <h3 class="section-title">제목</h3>
-
-      <div class="gsap-test-div" style="background:#efefef;">
-        <div class="animation-wrap"  style="height:3000px;">
-          <div class="msg-panel3" style="display:table;width:100%;height:1000px;background:#000;color:#fff;">
-            <p style="display:table-cell;vertical-align: middle;">안녕하세요 세번째 멘트 입니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </section>-->
 
   </div>
 </template>
@@ -56,8 +20,6 @@
 <script>
 import swiperDefault from '@/components/vendor/swiper-default.vue';
 import { useI18n } from 'vue-i18n';
-import scrollTriger from 'gsap/ScrollTrigger'
-import {gsap, Linear} from "gsap/all";
 
 export default {
   name: 'HomeView',
@@ -68,30 +30,30 @@ export default {
     return {
       keyVisualLists: [
         {
-          name: 'carousel.mainKeyVisual.name[0]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-1.svg', alt: '', text: 'carousel.mainKeyVisual.text[0]', routeName:'common.more', router:'/about'
+          name: 'carousel.mainKeyVisual.name[0]', videoSrc: 'MAIN_KV1.mp4', alt: '', text: 'carousel.mainKeyVisual.text[0]', routeName: 'common.more', router: '/about',
         },
         {
-          name: 'carousel.mainKeyVisual.name[1]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-2.svg', alt: '', text: 'carousel.mainKeyVisual.text[1]', routeName:'common.more', router:'/home'
+          name: 'carousel.mainKeyVisual.name[1]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-2.svg', alt: '', text: 'carousel.mainKeyVisual.text[1]', routeName: 'common.more', router: '/home',
         },
         {
-          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-3.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName:'common.more', router:'/about'
+          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-3.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName: 'common.more', router: '/about',
         },
         {
-          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-4.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName:'common.more', router:'/home'
+          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-4.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName: 'common.more', router: '/home',
         },
       ],
       cardLists: [
         {
-          name: 'carousel.mainKeyVisual.name[0]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-1.svg', alt: '', text: 'carousel.mainKeyVisual.text[0]', routeName:'common.more', router:'/about'
+          name: 'carousel.mainKeyVisual.name[0]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-1.svg', alt: '', text: 'carousel.mainKeyVisual.text[0]', routeName: 'common.more', router: '/about',
         },
         {
-          name: 'carousel.mainKeyVisual.name[1]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-2.svg', alt: '', text: 'carousel.mainKeyVisual.text[1]', routeName:'common.more', router:'/about'
+          name: 'carousel.mainKeyVisual.name[1]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-2.svg', alt: '', text: 'carousel.mainKeyVisual.text[1]', routeName: 'common.more', router: '/about',
         },
         {
-          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-3.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName:'common.more', router:'/home'
+          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-3.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName: 'common.more', router: '/home',
         },
         {
-          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-4.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName:'common.more', router:'/home'
+          name: 'carousel.mainKeyVisual.name[2]', backgroundSrc: 'https://southkorea.concentrix.com/wp-content/uploads/2019/02/home-panel-4.svg', alt: '', text: 'carousel.mainKeyVisual.text[2]', routeName: 'common.more', router: '/home',
         },
       ],
     };
@@ -120,74 +82,10 @@ export default {
       direction: 'horizontal',
       mousewheel: false,
       freeMode: false,
-    }
+    };
 
     return { t, keyVisualSwiperOptions, cardSwiperOptions };
   },
-  mounted() {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '#section3',
-        start: 'top top',
-        pin: '.gsap-test-div',
-        pinSpacing: false,
-        invalidateOnRefresh: true,
-      }
-    });
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.msg-panel1',
-        start: 'top top',
-        end: 'bottom 50%',
-        scrub: .0001,
-      }
-    })
-    .to('.msg-panel1', {scale:1.2, duration:3}, 0)
-    .fromTo('.msg-pane1', {opacity:0}, {opacity:1, duration:3, }, 0)
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '#section4',
-        start: 'top top',
-        pin: '.gsap-test-div',
-        pinSpacing: false,
-        invalidateOnRefresh: true,
-      }
-    })
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.msg-panel2',
-        start: 'top top',
-        end: 'bottom 50%',
-        scrub: .0001,
-      }
-    })
-    .to('.msg-panel2', {scale:1.2, duration:5}, 0)
-    .fromTo('.msg-pane2', {opacity:0}, {opacity:1, duration:5, }, 0)
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '#section5',
-        start: 'top top',
-        pin: '.gsap-test-div',
-        pinSpacing: false,
-        invalidateOnRefresh: true,
-      }
-    });
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '.msg-panel3',
-        start: 'top top',
-        end: 'bottom 50%',
-        scrub: .0001,
-      }
-    })
-    .to('.msg-panel3', {scale:1.5, duration:1}, 0)
-    .fromTo('.msg-pane3', {opacity:0}, {opacity:1, duration:3, }, 0)
-
-  }
 };
 </script>
 

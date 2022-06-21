@@ -1,13 +1,13 @@
 <template >
-    <header-wrap />
+  <header-wrap />
 
-    <main id="main" class="main" data-scroll-container>
-        <router-view />
-    </main>
+  <main id="main" class="main" data-scroll-container>
+    <router-view />
+  </main>
 
-    <footer-wrap />
+  <footer-wrap />
 
-    <scroll-top />
+  <scroll-top />
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default {
     handleScroll() {
       const header = document.querySelector('.header');
       // eslint-disable-next-line no-unused-expressions
-      if(window.scrollY > 58) {
+      if(window.scrollY > 90) {
         header.classList.add('is-fixed');
       } else {
         header.classList.remove('is-fixed');
@@ -54,11 +54,11 @@ html {
   scroll-behavior: smooth;
 }
 .wrap {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
   .main {
     &::-webkit-scrollbar {
       display:none;
@@ -78,16 +78,16 @@ html {
   }
 }
 nav {
-    padding: 30px;
+  padding: 30px;
 
-    a {
-        font-weight: bold;
-        color: #2c3e50;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
 
-        &.router-link-exact-active {
-            color: #42b983;
-        }
+    &.router-link-exact-active {
+      color: #42b983;
     }
+  }
 }
 
 .footer {

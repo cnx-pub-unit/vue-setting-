@@ -19,9 +19,9 @@
       v-for="(item, i) in swiperLists"
       :key="i"
       :style="{'background-image':`url( ${item.backgroundSrc})`}">
-      <div class="slide-inner">
+      <div class="slide-inner" v-if="item.backgroundSrc && !item.videoSrc">
 
-        <div class="content-box" v-if="item.backgroundSrc">
+        <div class="content-box">
           <strong class="title" v-show="item.name !== ''">{{ t(item.name) }}</strong>
 
           <p class="desc" v-show="item.text !== ''">{{ t(item.text) }}</p>
@@ -33,9 +33,13 @@
             </router-link>
           </p>
         </div>
+      </div>
 
-        <div class="video-box" v-if="item.videoSrc">
-
+      <div class="slide-inner full-size" v-if="item.videoSrc && !item.backgroundSrc">
+        <div class="video-box" >
+          <video loop autoplay mute>
+            <source :src="item.videoSrc" type="video/mp4">
+          </video>
         </div>
       </div>
     </swiper-slide>
@@ -107,6 +111,11 @@ export default {
       position:relative;
       width:100%;
       height:100%;
+      &.full-size {
+        padding:0;
+        width:100%;
+        height:100%;
+      }
       .content-box {
         .title {
           display:block;
@@ -125,6 +134,19 @@ export default {
         }
         .more-btn {
           color: inherit;
+        }
+      }
+      .video-box {
+        position:relative;
+        width:100%;
+        height:100%;
+        video {
+          position:absolute;
+          top:0;
+          left:50%;
+          width:100%;
+          height:100%;
+          transform: translateX(-50%);
         }
       }
     }

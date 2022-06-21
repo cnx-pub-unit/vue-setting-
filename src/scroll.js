@@ -9,16 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 export const SCROLLER = '[data-scroll-container]';
 
 window.addEventListener('load', () => {
-  if(document.querySelector('[data-scroll-container]')) {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-    });
+    if(document.querySelector('[data-scroll-container]')) {
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+        });
 
-    scroll.on('scroll', ScrollTrigger.update);
+        scroll.on('scroll', ScrollTrigger.update);
 
-    ScrollTrigger.addEventListener('refresh', () => setTimeout(() => { scroll.update(); }, 500));
-    ScrollTrigger.refresh();
-  }
+        ScrollTrigger.addEventListener('refresh', () => setTimeout(() => { scroll.update(); }, 500));
+        ScrollTrigger.refresh();
+    }
 });
 

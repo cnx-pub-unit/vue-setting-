@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "clean": "rimraf ./doce",
     "dev": "cross-env NODE_ENV=development vue-cli-service serve",
     "build": "cross-env NODE_ENV=development vue-cli-service build",
-    "build:prd": "cross-env NODE_ENV=production vue-cli-service build",
+    "build:prd": "npm run clean && cross-env NODE_ENV=production vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -30,14 +31,25 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-airbnb": "^6.0.0",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-vue": "^8.0.3",
     "eslint-plugin-vuejs-accessibility": "^1.1.0",
+    "file-loader": "^6.2.0",
     "gh-pages": "^4.0.0",
+    "glob": "^8.0.3",
+    "image-webpack-loader": "^8.1.0",
     "path": "^0.12.7",
+    "request": "^2.79.0",
     "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
-    "vue-cli-plugin-i18n": "~2.3.1"
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "svg-inline-loader": "^0.8.2",
+    "svg-sprite-loader": "^6.0.11",
+    "url-loader": "^4.1.1",
+    "vue-cli-plugin-i18n": "~2.3.1",
+    "vue-svg-loader": "^0.16.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }

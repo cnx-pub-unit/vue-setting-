@@ -10,11 +10,10 @@ import '@/assets/scss/layout.scss';
 import '@/assets/scss/common.scss';
 
 const app = createApp(App);
-console.log(app);
 app.config.globalProperties.$axios = axios;
 app
-  .use(i18n)
-  .use(store)
-  .use(router)
-  .mount('#app');
+.use(i18n)
+.use(store)
+.use(router)
+.mount('#app');
 

@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkvue_setting"]=self["webpackChunkvue_setting"]||[]).push([[290],{5290:function(t,e,n){n.r(e),n.d(e,{default:function(){return f}});var u=n(3396);function r(t,e,n,r,s,i){return(0,u.wg)(),(0,u.iD)("div",null,"중첩 라우팅 입니다.")}var s=n(4329),i={name:"test-first",setup(){const{t:t}=(0,s.QT)();return{t:t}}},c=n(89);const a=(0,c.Z)(i,[["render",r]]);var f=a}}]);
-//# sourceMappingURL=290.51b0c373.js.map
